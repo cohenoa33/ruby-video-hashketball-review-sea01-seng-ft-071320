@@ -135,7 +135,6 @@ def teams(team_name)
     game_hash[:home]
   when game_hash[:away][:team_name]
     game_hash[:away]
-    binding.pry
   end
 end
 
@@ -179,7 +178,7 @@ end
 
 
 def player_stats(name)
- 
+ i = 0 
 end
 
 
