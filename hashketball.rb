@@ -178,12 +178,10 @@ end
 
 def player_stats(player_name)
 
-	game_hash.each do |location, team_data|
+	game_hash.each do |team, team_data|
 		team_data[:players].each do |player, player_data| 
-			if [:player_name] == player_name
-				my_hash = a
-				my_hash.shift
-				return my_hash
+			if player == player_name
+				return game_hash[team][:players][player_name]
 			end
 		end
 	end
