@@ -173,7 +173,7 @@ def player_numbers (team_name)
      team_data[:players].each {|player| jersey_numbers.push(player[:number])}
    end
  end
-jersey_numbers
+  jersey_numbers
 end
 
 # * Build a method, `player_numbers`, that takes in an argument of a team name and
