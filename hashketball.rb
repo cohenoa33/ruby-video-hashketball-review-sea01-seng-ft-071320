@@ -167,9 +167,13 @@ def team_names
 end
 
 def player_numbers (team_name)
-  teams(team_name)[:players].map do |key, value| 
-   value[:number]
-  end 
+ jersey_numbers = []
+ game_hash.each do |team, team_data|
+   if team_data[:team_name] == team_name
+     team_data[:players].each {|player| jersey_numbers.push(player[:number])}
+   end
+ end
+jersey_numbers
 end
 
 # * Build a method, `player_numbers`, that takes in an argument of a team name and
