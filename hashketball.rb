@@ -1,5 +1,5 @@
 # Write your code below game_hash
-
+require 'pry'
 def game_hash
   {
     home: {
@@ -128,3 +128,78 @@ def game_hash
 end
 
 # Write code here
+
+def teams(team_name)
+  case team_name
+  when game_hash[:home][:team_name]
+    game_hash[:home]
+  when game_hash[:away][:team_name]
+    game_hash[:away]
+  end
+end
+
+def num_points_scored (each_player)
+  game_hash.each do |team, team_data|
+    team_data[:players].each do |player|
+      if player[:player_name] == each_player
+        return player[:points]
+      end
+    end
+  end
+end
+
+def shoe_size (each_player)
+   game_hash.each do |team, team_data|
+    team_data[:players].each do |player|
+      if player[:player_name] == each_player
+        return player[:shoe]
+      end
+    end
+  end
+end
+
+def team_colors (team_name)
+  teams(team_name)[:colors]
+end
+
+def team_names
+ [game_hash[:home][:team_name], game_hash[:away][:team_name]]
+end
+
+def player_numbers (team_name)
+  teams(team_name)[:players].map do |key, value| 
+   value[:number]
+  end 
+end
+
+# * Build a method, `player_numbers`, that takes in an argument of a team name and
+#   returns an `Array` of the jersey numbers for that team.
+
+# * Build a method, `player_stats`, that takes in an argument of a player's name
+#   and returns a hash of that player's stats.
+
+#   * Check out the following example of the expected return value of the
+#     `player_stats` method:
+
+#   ```bash
+#   player_stats("Alan Anderson")
+#   => { :number => 0,
+#         :shoe => 16,
+#         :points => 22,
+#         :rebounds => 12,
+#         :assists => 12,
+#         :steals => 3,
+#         :blocks => 1,
+#         :slam_dunks => 1
+#       }
+#   ```
+
+# * Build a method, `big_shoe_rebounds`, that will return the number of rebounds
+#   associated with the player that has the largest shoe size. Break this one down
+#   into steps:
+
+#   # * First, find the player with the largest shoe size
+#   # * Then, return that player's number of rebounds
+#   # * Remember to think about return values here.
+
+
