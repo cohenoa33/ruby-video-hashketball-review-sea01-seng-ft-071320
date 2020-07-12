@@ -176,6 +176,14 @@ def player_numbers (team_name)
   jersey_numbers
 end
 
+def all_players
+  game_hash[:home][:players].merge(game_hash[:away][:players])
+end
+
+def player_stats(name)
+  all_players[name]
+end
+
 
 # * Build a method, `player_stats`, that takes in an argument of a player's name
 #   and returns a hash of that player's stats.
