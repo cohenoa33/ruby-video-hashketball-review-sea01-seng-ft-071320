@@ -178,16 +178,14 @@ end
 
 
 def player_stats(name)
-  hash_of_players_stats = {}
+
   game_hash.each do |key, value|
   value[:players].each do |player_name|
     if name == player_name[:player_name]
-    
-      hash_of_players_stats << player_name
+      player_name
       end
     end
   end
-  hash_of_players_stats
 end
 
 
