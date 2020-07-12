@@ -176,10 +176,6 @@ def player_numbers (team_name)
   jersey_numbers
 end
 
-def player_stats(player_name)
- stats= players.find {|player| player.fetch(:player_name) == player_name}
-  stats.delete_if {|info, string| info == :player_name}
-end
 
 # * Build a method, `player_stats`, that takes in an argument of a player's name
 #   and returns a hash of that player's stats.
