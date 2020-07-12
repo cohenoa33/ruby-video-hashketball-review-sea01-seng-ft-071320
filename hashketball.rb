@@ -183,7 +183,7 @@ def player_stats(name)
   value[:players].each do |player_name|
     if name == player_name[:player_name]
       binding.pry
-      hash_of_players_stats << [:player_name]
+      hash_of_players_stats << player_name
       end
     end
   end
