@@ -135,6 +135,7 @@ def teams(team_name)
     game_hash[:home]
   when game_hash[:away][:team_name]
     game_hash[:away]
+    binding.pry
   end
 end
 
@@ -176,12 +177,9 @@ def player_numbers (team_name)
   jersey_numbers
 end
 
-def all_players
-  game_hash[:home][:players].merge(game_hash[:away][:players])
-end
 
 def player_stats(name)
-  all_players[name]
+ 
 end
 
 
