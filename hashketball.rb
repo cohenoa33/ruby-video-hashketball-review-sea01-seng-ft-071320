@@ -182,6 +182,7 @@ def player_stats(player_name)
        if player[:player_name] == player_name
          player_hash = []
          player_hash << player[:player_name]
+         binding.pry
          player_hash
        end
      end
