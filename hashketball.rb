@@ -190,25 +190,8 @@ def player_stats(name)
 end
 
 
+def big_shoe_rebounds
 
-# * Build a method, `player_stats`, that takes in an argument of a player's name
-#   and returns a hash of that player's stats.
-
-#   * Check out the following example of the expected return value of the
-#     `player_stats` method:
-
-#   ```bash
-#   player_stats("Alan Anderson")
-#   => { :number => 0,
-#         :shoe => 16,
-#         :points => 22,
-#         :rebounds => 12,
-#         :assists => 12,
-#         :steals => 3,
-#         :blocks => 1,
-#         :slam_dunks => 1
-#       }
-#   ```
 
 # * Build a method, `big_shoe_rebounds`, that will return the number of rebounds
 #   associated with the player that has the largest shoe size. Break this one down
